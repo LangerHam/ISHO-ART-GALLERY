@@ -11,14 +11,9 @@
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
 - [Component Inventory](#component-inventory)
-- [Design Specifications](#design-specifications)
-- [Accessibility](#accessibility)
-- [Performance](#performance)
 - [Development](#development)
 - [Deployment](#deployment)
-- [Known Deviations](#known-deviations)
-- [Contributing](#contributing)
-- [License](#license)
+- [Known Deviations](#deviations)
 
 ---
 
@@ -66,7 +61,7 @@ This project is a conversion of Figma designs (desktop 1366px and mobile 390px) 
 
 ---
 
-## 🌐 Browser Support
+## Browser Support
 
 | Browser        | Minimum Version |
 | -------------- | --------------- |
@@ -378,3 +373,4 @@ Link: https://isho-art-gallery.netlify.app
    - **Figma:** Static design
    - **Implementation:** Added loading states, disabled states, animations
    - **Reason:** Production-ready interactive elements
+
