@@ -1,0 +1,187 @@
+@import 'variables';
+@import 'mixins';
+
+
+@import 'components';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  line-height: $headings-line-height;
+  margin-bottom: $spacer;
+}
+
+p {
+  margin-bottom: $spacer;
+}
+
+a {
+  color: $text-dark;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover,
+  &:focus {
+    color: $primary-gold-dark;
+  }
+  
+  @include focus-visible;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Buttons
+.btn {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  
+  @include focus-visible;
+}
+
+.btn-dark {
+  background-color: $text-dark;
+  border-color: $text-dark;
+  color: $white;
+  
+  &:hover,
+  &:focus {
+    background-color: lighten($text-dark, 10%);
+    border-color: lighten($text-dark, 10%);
+  }
+}
+
+.card {
+  border: 1px solid $border-gray;
+  border-radius: 0;
+}
+
+.form-control {
+  font-family: $font-family-base;
+  
+  &:focus {
+    border-color: $primary-gold-dark;
+    box-shadow: 0 0 0 0.25rem rgba($primary-gold-dark, 0.25);
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.skip-link {
+  @include skip-link;
+}
+
+// Focus visible for all interactive elements
+button,
+a,
+input,
+select,
+textarea {
+  @include focus-visible;
+}
+
+// Hide elements on specific breakpoints
+@include respond-below(md) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+@media print {
+  .navbar,
+  .footer,
+  .btn,
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-indicators {
+    display: none !important;
+  }
+  
+  .card {
+    break-inside: avoid;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: -1rem 0 0 -1rem;
+    border: 3px solid $primary-gold-dark;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Hover States for Touch Devices
+@media (hover: none) and (pointer: coarse) {
+  .artwork-card .btn-wishlist {
+    opacity: 1;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .btn,
+  .card,
+  .form-control {
+    border-width: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Platforms - Discover and purchase original artworks from talented artists. Browse paintings, mixed media, watercolor, and more.">
+    <meta name="theme-color" content="#faf7f4">
+
+    <title>Platforms - Art Gallery & Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-5">
+                <!-- Logo -->
+                <a class="navbar-brand" href="/" aria-label="Platforms Home">
+                    <img src="assets/icons/logo.svg" alt="Platforms" width="89" height="35" class="logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#artists">Artists</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#about">About Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search & Actions -->
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-outline-dark btn-sm" type="button" aria-label="Search"
+                            data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bi bi-search"></i> <span class="d-none d-lg-inline">Search</span>
+                        </button>
+                        <a href="#login" class="btn btn-link text-dark text-decoration-none" aria-label="Login">
+                            <i class="bi bi-person"></i> <span class="d-none d-lg-inline">Login</span>
+                        </a>
+                        <a href="#cart" class="btn btn-link text-dark text-decoration-none position-relative"
+                            aria-label="Shopping cart">
+                            <i class="bi bi-bag"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark visually-hidden">
+                                0 items
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" style="padding-top: 65px;">
+
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel" aria-label="Featured artworks carousel">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/hero/hero1.png" class="d-block w-100" alt="Featured artwork collection"
+                            loading="eager">
+                        <div class="carousel-caption d-none d-md-block">
+                            <!--<h1 class="display-4 fw-bold text-black">Discover Unique Artworks</h1>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hero/hero-2.jpg" class="d-block w-100" alt="Artist showcase"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hero/hero-3.jpg" class="d-block w-100" alt="Gallery collection"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hero/hero-4.jpg" class="d-block w-100" alt="Art exhibition"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Popular Searches Section -->
+        <section class="popular-searches py-5 bg-light" aria-labelledby="popular-searches-title">
+            <div class="container">
+                <h2 id="popular-searches-title" class="section-title mb-4">
+                    <i class="bi bi-search me-2" aria-hidden="true"></i>
+                    POPULAR SEARCHES
+                </h2>
+                <div class="filter-tags d-flex flex-wrap gap-2">
+                    <a href="#filter" class="btn btn-tag">Acrylic Paintings</a>
+                    <a href="#filter" class="btn btn-tag">Oil Paintings</a>
+                    <a href="#filter" class="btn btn-tag">Mixed Media</a>
+                    <a href="#filter" class="btn btn-tag">Watercolor</a>
+                    <a href="#filter" class="btn btn-tag">Landscapes</a>
+                    <a href="#filter" class="btn btn-tag">Portraits</a>
+                    <a href="#filter" class="btn btn-tag">Square</a>
+                    <a href="#filter" class="btn btn-tag">Affordable Artworks</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery py-5 bg-light" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 id="gallery-title" class="section-title mb-4">
+                    <i class="bi bi-grid-3x3 me-2" aria-hidden="true"></i>
+                    GALLERY
+                </h2>
+                <div class="row g-4">
+                    <!-- Artwork Card 1 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-1.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Mohammad Eunus</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Artwork Card 2 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-2.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Mohammad Eunus</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Artwork Card 3 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-3.jpg" class="card-img-top"
+                                        alt="Existence of Abstraction -4" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Existence of Abstraction -4</h3>
+                                    <p class="card-text text-muted small mb-2">Mohammad Eunus</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Artwork Card 4 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-4.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Mohammad Eunus</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Additional Cards (repeat pattern) -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-5.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Bangladesh</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-6.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Dhaka, Bangladesh</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-7.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Barisal, Bangladesh</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="artwork-card">
+                            <div class="card border-secondary h-100">
+                                <div class="card-img-wrapper position-relative">
+                                    <img src="assets/images/artworks/artwork-8.jpg" class="card-img-top"
+                                        alt="In the Red (2002)" loading="lazy">
+                                    <button class="btn btn-wishlist" aria-label="Add to wishlist">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title h6">In the Red (2002)</h3>
+                                    <p class="card-text text-muted small mb-2">Bangladesh</p>
+                                    <p class="card-price fw-semibold">৳ 36,459</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Art by Price Section -->
+        <section class="art-by-price py-5" aria-labelledby="art-by-price-title">
+            <div class="container">
+                <h2 id="art-by-price-title" class="section-title mb-4">
+                    <i class="bi bi-tag me-2" aria-hidden="true"></i>
+                    ART BY PRICE
+                </h2>
+                <div class="filter-tags d-flex flex-wrap gap-2">
+                    <a href="#filter" class="btn btn-tag-white">Under ৳ 15,000</a>
+                    <a href="#filter" class="btn btn-tag-white">৳ 15,000 ৳ 50,000</a>
+                    <a href="#filter" class="btn btn-tag-white">৳ 50,000 to ৳ 1,00,000</a>
+                    <a href="#filter" class="btn btn-tag-white">৳ 1,00,000 to ৳ 2,00,000</a>
+                    <a href="#filter" class="btn btn-tag-white">৳ 2,00,000 to ৳ 3,00,000</a>
+                    <a href="#filter" class="btn btn-tag-white">Above ৳ 3,00,000</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop by Category Section -->
+        <section class="shop-by-category py-5 bg-light" aria-labelledby="shop-category-title">
+            <div class="container">
+                <h2 id="shop-category-title" class="section-title mb-4">
+                    <i class="bi bi-grid me-2" aria-hidden="true"></i>
+                    SHOP BY CATEGORY
+                </h2>
+
+                <!-- Category Carousel -->
+                <div id="categoryCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="category-card">
+                                        <img src="assets/images/artworks/artwork-1.jpg" class="w-100"
+                                            alt="Acrylic Paintings" loading="lazy">
+                                        <div class="category-overlay">
+                                            <h3 class="h5"><a href="#category"
+                                                    class="text-decoration-underline text-light">Acrylic Paintings</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="category-card">
+                                        <img src="assets/images/artworks/artwork-3.jpg" class="w-100"
+                                            alt="Oil Paintings" loading="lazy">
+                                        <div class="category-overlay">
+                                            <h3 class="h5"><a href="#category"
+                                                    class="text-decoration-underline text-light">Oil Paintings</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="category-card">
+                                        <img src="assets/images/artworks/artwork-5.jpg" class="w-100" alt="Mixed Media"
+                                            loading="lazy">
+                                        <div class="category-overlay">
+                                            <h3 class="h5"><a href="#category"
+                                                    class="text-decoration-underline text-light">Mixed Media</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="category-card">
+                                        <img src="assets/images/artworks/artwork-7.jpg" class="w-100" alt="Watercolor"
+                                            loading="lazy">
+                                        <div class="category-overlay">
+                                            <h3 class="h5"><a href="#category"
+                                                    class="text-decoration-underline text-light">Watercolor</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Artists Section -->
+        <section id="artists" class="meet-artists py-5" aria-labelledby="artists-title">
+            <div class="container">
+                <h2 id="artists-title" class="section-title mb-4">
+                    <i class="bi bi-palette me-2" aria-hidden="true"></i>
+                    MEET OUR ARTISTS
+                </h2>
+
+                <!-- Artist Filter Tags -->
+                <div class="filter-tags d-flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-tag-active">Popular Artist</button>
+                    <button class="btn btn-tag-white">Upcoming Artist</button>
+                    <button class="btn btn-tag-white">Most Visited</button>
+                    <button class="btn btn-tag-white">All Artists</button>
+                </div>
+
+                <!-- Artist Cards -->
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="artist-card text-center">
+                            <img src="assets/images/artists/artist-1.jpg" class="mb-3" alt="Abdus Satter Toufiq"
+                                width="230" height="230" loading="lazy">
+                            <h3 class="h6"><a href="#artist" class="text-decoration-underline text-dark">Abdus Satter
+                                    Toufiq</a></h3>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="artist-card text-center">
+                            <img src="assets/images/artists/artist-2.jpg" class="mb-3" alt="Ahmed Shamsuddoha"
+                                width="230" height="230" loading="lazy">
+                            <h3 class="h6"><a href="#artist" class="text-decoration-underline text-dark">Ahmed
+                                    Shamsuddoha</a></h3>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="artist-card text-center">
+                            <img src="assets/images/artists/artist-3.jpg" class="mb-3" alt="Auntora Mehrukh Azad"
+                                width="230" height="230" loading="lazy">
+                            <h3 class="h6"><a href="#artist" class="text-decoration-underline text-dark">Auntora Mehrukh
+                                    Azad</a></h3>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="artist-card text-center">
+                            <img src="assets/images/artists/artist-4.jpg" class="mb-3" alt="Dilara Begum Jolly"
+                                width="230" height="230" loading="lazy">
+                            <h3 class="h6"><a href="#artist" class="text-decoration-underline text-dark">Dilara Begum
+                                    Jolly</a></h3>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="artist-card text-center">
+                            <img src="assets/images/artists/artist-5.jpg" class="mb-3" alt="Mohammad Iqbal" width="230"
+                                height="230" loading="lazy">
+                            <h3 class="h6"><a href="#artist" class="text-decoration-underline text-dark">Mohammad
+                                    Iqbal</a></h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features py-5" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title mb-4">
+                    <i class="bi bi-star me-2" aria-hidden="true"></i>
+                    FEATURES
+                </h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="feature-card card h-100 border-0">
+                            <img src="assets/images/features/feature-1.jpg" class="card-img-top"
+                                alt="Vision Talk With Rayana Hossain" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Interview</span>
+                                <h3 class="card-title h6"><a href="#article"
+                                        class="text-decoration-underline text-dark">Vision Talk With Rayana Hossain</a>
+                                </h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="feature-card card h-100 border-0">
+                            <img src="assets/images/features/feature-2.jpg" class="card-img-top"
+                                alt="Kamrul Hassan; Unveiling The Soul of Bengal" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Interview</span>
+                                <h3 class="card-title h6"><a href="#article"
+                                        class="text-decoration-underline text-dark">Kamrul Hassan; Unveiling The Soul of
+                                        Bengal</a></h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="feature-card card h-100 border-0">
+                            <img src="assets/images/features/feature-3.jpg" class="card-img-top"
+                                alt="What inspires professor Nisar Hossain?" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Stoplight</span>
+                                <h3 class="card-title h6"><a href="#article"
+                                        class="text-decoration-underline text-dark">What inspires professor Nisar
+                                        Hossain?</a></h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="feature-card card h-100 border-0">
+                            <img src="assets/images/features/feature-4.jpg" class="card-img-top" alt="Explore Eunus's Process"
+                                loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Stoplight</span>
+                                <h3 class="card-title h6"><a href="#article"
+                                        class="text-decoration-underline text-dark">Explore Eunus's Process</a></h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="feature-card card h-100 border-0">
+                            <img src="assets/images/features/feature-5.jpg" class="card-img-top"
+                                alt="Inaugural Event of Platforms" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Events</span>
+                                <h3 class="card-title h6"><a href="#article"
+                                        class="text-decoration-underline text-dark">Inaugural Event of Platforms</a>
+                                </h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="#explore" class="btn btn-dark">
+                        Start Exploring <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-light py-5" role="contentinfo">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo & Contact -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="assets/icons/logo_light.svg" alt="Platforms" width="108" height="43" class="mb-3">
+                    <div class="contact-info">
+                        <p class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:info@plat_forms.com"
+                                class="text-light text-decoration-none">info@plat_forms.com</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:+808569854785" class="text-light text-decoration-none">+80 8569854785</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h3 class="h6 mb-3">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#gallery" class="text-light text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#blogs" class="text-light text-decoration-none">Blogs</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h3 class="h6 mb-3">Support</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#customer-service" class="text-light text-decoration-none">Customer
+                                Service</a></li>
+                        <li class="mb-2"><a href="#faqs" class="text-light text-decoration-none">FAQs</a></li>
+                        <li class="mb-2"><a href="#return-policy" class="text-light text-decoration-none">Return
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#data-security" class="text-light text-decoration-none">Data
+                                Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h3 class="h6 mb-3">Legal</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#terms" class="text-light text-decoration-none">Terms of Use</a></li>
+                        <li class="mb-2"><a href="#terms-conditions" class="text-light text-decoration-none">Terms &
+                                Conditions</a></li>
+                        <li class="mb-2"><a href="#privacy" class="text-light text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="mb-2"><a href="#cookies" class="text-light text-decoration-none">Cookies Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-12 col-lg-3">
+                    <h3 class="h6 mb-3">Sign up for Newsletter</h3>
+                    <form class="newsletter-form" aria-label="Newsletter signup">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address"
+                                aria-label="Email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title h5" id="searchModalLabel">Search Artworks</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form role="search">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for artworks, artists..."
+                                aria-label="Search">
+                            <button class="btn btn-dark" type="submit">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
